@@ -10,6 +10,11 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class MainController {
 
+	@GetMapping("/")
+	public String Main() {
+		return "MainPage";
+	}
+	
 	@GetMapping("main")
 	public String MainPage() {
 		return "MainPage";

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h2>Signup Page</h2>
+	
+	<form th:action="@{/user/signup}" method="post" >
+	
+		<div> 
+			<label for="username">아이디 : </label> 
+			<input type="text" name="username">
+		</div>
+		
+		<div> 
+			<label for="password">패스워드 : </label> 
+			<input type="password" name="password">
+		</div>
+		
+		<div> 
+			<label for="name">이름 : </label> 
+			<input type="text" name="name" placeholder="이름">
+		</div>
+		
+		<div> 
+			<label for="nickname">닉네임 : </label> 
+			<input type="text" name="nickname" placeholder="닉네임">
+		</div>
+		
+		<div> 
+			<label for="birthday">생일 : </label> 
+			<input type="date" name="birthday">
+		</div>
+		
+		<button type="submit">회원가입</button>
+		
+	</form>
+	
+</body>
+</html>
