@@ -6,6 +6,8 @@
 </head>
 <body>
 
+	<nav th:replace="~{navigation :: navbarFragment}"></nav>
+
 	<h2>Signup Page</h2>
 	
 	<form th:action="@{/user/signup}" method="post" >

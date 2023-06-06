@@ -19,9 +19,7 @@ import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 @Service
-public class UserService
-	implements UserDetailsService 
-		{
+public class UserService implements UserDetailsService {
 
 	private final UserRepository userRepository;
 	private final PasswordEncoder passwordEncoder;
@@ -48,6 +46,7 @@ public class UserService
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		// 로그인
+		// 아이디는 대문자로 변환
 		username = username.toUpperCase();
 		
 		Optional<UserList> _user = this.userRepository.findByusername(username);
@@ -65,7 +64,6 @@ public class UserService
             authorities.add(new SimpleGrantedAuthority(UserRole.user.getValue()));
         }
         
-		
 		return new User(user.getUsername(), user.getPassword(), authorities);
 	}
 }

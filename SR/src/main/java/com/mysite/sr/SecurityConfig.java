@@ -1,4 +1,4 @@
-package com.mysite.sr.user;
+package com.mysite.sr;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -34,7 +34,11 @@ public class SecurityConfig {
 			.formLogin()
 			.loginPage("/user/login")
 			.defaultSuccessUrl("/")
-            
+		.and()
+            .logout()
+            .logoutRequestMatcher(new AntPathRequestMatcher("/user/logout"))
+            .logoutSuccessUrl("/")
+            .invalidateHttpSession(true)
             
 		;		
 		return http.build();	
