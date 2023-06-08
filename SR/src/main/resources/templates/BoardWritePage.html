@@ -3,20 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<script type="text/javascript" src="/js/BoardWrite.js" ></script>
-<link rel="stylesheet" href="/css/MainPage.css" >
+<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+<link rel="stylesheet" href="/css/BoardWrite.css" >
 </head>
 <body>
 
 	<input th:value="${test}" type="text"><br>
 	
-	<input class="title" type="text" value="제목"><br>
+	<input class="title" type="text" id="title" value="제목"><br>
 	<input class="writer" type="text" value="작성자"><br>
 	<input class="content" type="text" value="내용"><br>
-	<input class="image" type="file" ><br>
 	
-	<button type="button" onclick="test()">버튼</button>
-	<div>ㅂㅈㄷㅂㅈㄷ</div>
+	<!-- <input type="file" class="imgInput" id="imgInput" onchange="readURL(this)" accept="image/*"><br>
+	<img id="preview" alt="이미지 미리보기" src="#"><br> -->
+	
+  	<input type="file" class="real-upload" accept="image/*" required >
+  	<div class="upload">div section</div>
+  	<ul class="image-preview"></ul>
+	
+	<button type="button" onclick="">버튼</button>
+	
+	<script type="text/javascript" src="/js/BoardWrite.js" ></script>
 	
 </body>
 </html>
