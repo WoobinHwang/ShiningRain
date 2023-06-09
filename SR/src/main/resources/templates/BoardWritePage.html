@@ -14,12 +14,15 @@
 	<input class="writer" type="text" value="작성자"><br>
 	<input class="content" type="text" value="내용"><br>
 	
-	<!-- <input type="file" class="imgInput" id="imgInput" onchange="readURL(this)" accept="image/*"><br>
-	<img id="preview" alt="이미지 미리보기" src="#"><br> -->
-	
-  	<input type="file" class="real-upload" accept="image/*" required >
-  	<div class="upload">div section</div>
-  	<ul class="image-preview"></ul>
+  	<input type="file" class="imgInput" accept="image/*" >
+  	
+  	<img class="preview" alt="마지막 올린 이미지" src="" onerror="this.style.display='none';" >
+  	<ul class="imgList">
+  		<!-- <li class="target" value="값">
+  			<button text="X"></button>
+  		</li> -->
+	</ul>
+  	
 	
 	<button type="button" onclick="">버튼</button>
 	

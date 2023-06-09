@@ -1,7 +1,12 @@
 @charset "EUC-KR";
 
+ul{
+	list-style: none;
+	  margin:0px;
+	  padding:0px;
+}
+
 li {
-  list-style: none;
 }
 
 img {
