@@ -13,14 +13,15 @@
 	<input class="title" type="text" id="title" value="제목"><br>
 	<input class="writer" type="text" value="작성자"><br>
 	<input class="content" type="text" value="내용"><br>
-	
-  	<input type="file" class="imgInput" accept="image/*" >
-  	
+	<div>
+  		<input type="file" class="imgInput" accept="image/*" >
+  	</div>
   	<img class="preview" alt="마지막 올린 이미지" src="" onerror="this.style.display='none';" >
   	<ul class="imgList">
-  		<!-- <li class="target" value="값">
-  			<button text="X"></button>
-  		</li> -->
+  		<!-- <li>
+  			<span>제목</span><input type="button" value="X" onclick="removeImage('qwe')">
+  			<button onclick="removeImage(this)">X</button>
+		</li> -->
 	</ul>
   	
 	

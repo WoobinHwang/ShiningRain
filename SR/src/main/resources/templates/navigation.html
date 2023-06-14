@@ -1,6 +1,7 @@
 <nav th:fragment="navbarFragment">
 	<a href="/">SR</a>
 	<a href="/user/signup">회원가입</a>
+	<a href="/board/write">글쓰기</a>
 	<a sec:authorize="isAnonymous()" href="/user/login">로그인</a>
 	<a sec:authorize="isAuthenticated()" href="/user/logout">로그아웃</a>
 </nav>
